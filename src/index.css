@@ -13,7 +13,12 @@ code {
 }
 .navbar-nav .nav-item .nav-link {
   font-weight: bold;
+  font-size: larger;
+  color:rgb(119, 115, 115);
 }
 .navbar-nav .nav-item .nav-link:active {
-  color: red;
+  color: rgb(47, 0, 255);
+}
+.navbar{
+  background-color: rgb(204, 151, 53);
 }
