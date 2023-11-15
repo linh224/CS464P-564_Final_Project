@@ -1,8 +1,10 @@
 # Instructor: Paun, Caterina L
+
 # Class: CS464P/564
+
 # Student: Deana Jackson, Sienna Day, Linh Nguyen
 
-<h2>Purpose: </h2>
+<h2>Purpose:</h2>
 Develop a dynamic and user-friendly web dashboard that provides a comprehensive overview of the New York Times Best Seller lists.
 <h2>Core Functionalities:</h2>
 <h3>Bestseller List Overview:</h3>
@@ -15,11 +17,13 @@ Develop a dynamic and user-friendly web dashboard that provides a comprehensive 
 <p>Incorporate data visualizations and charts to present insights into bestseller trends, such as time as a bestseller, weekly changes and genre distribution.</p>
 
 # Install & Run App
+
 1. Clone repository: `git clone https://github.com/linh224/CS464P-564_Final_Project.git`
-2. Install dependencies:  `npm i`
+2. Install dependencies: `npm i`
 3. Start the whole project: `npm start`
 
 # Resource
-https://developers.google.com/books 
+
+https://developers.google.com/books
 
 https://developer.nytimes.com/docs/books-product/1/overview
