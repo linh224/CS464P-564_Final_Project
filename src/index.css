@@ -14,13 +14,15 @@ code {
 .navbar-nav .nav-item{
   display: block;
 }
-.navbar-nav .nav-item .nav-link {
+.nav-item{
+  padding: 10px;
   font-weight: bold;
   font-size: larger;
   color:rgb(119, 115, 115);
+  margin-left: 1px;
 }
-.navbar-nav .nav-item .nav-link:active {
-  color: rgb(47, 0, 255);
+.nav-item:hover {
+  color: black;
 }
 .navbar{
   background-color: rgb(204, 151, 53);

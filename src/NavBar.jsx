@@ -18,22 +18,22 @@ const NavBar = () => {
         <ul className="">
           <li className="nav-item active d-block">
             <a className="nav-link" href="/">
-              Home
+              <i class="fa-solid fa-house"></i> Home
             </a>
           </li>
           <li className="nav-item d-block">
             <a className="nav-link" href="/books">
-              Books
+              <i class="fa-solid fa-book"></i> Books
             </a>
           </li>
           <li className="nav-item d-block">
             <a className="nav-link" href="/search">
-              Search
+              <i class="fa-solid fa-magnifying-glass"></i> Search
             </a>
           </li>
           <li className="nav-item d-block">
             <a className="nav-link" href="/contact">
-              Contact
+              <i class="fa-solid fa-envelope"></i> Contact
             </a>
           </li>
         </ul>
