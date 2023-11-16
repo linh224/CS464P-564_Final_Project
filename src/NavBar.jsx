@@ -22,15 +22,16 @@ const NavBar = () => {
             </a>
           </li>
           <li className="nav-item d-block">
+            <a className="nav-link" href="/dashboard">
+              <i class="fa-solid fa-chart-simple"></i> Dashboard
+            </a>
+          </li>
+          <li className="nav-item d-block">
             <a className="nav-link" href="/books">
               <i class="fa-solid fa-book"></i> Books
             </a>
           </li>
-          <li className="nav-item d-block">
-            <a className="nav-link" href="/search">
-              <i class="fa-solid fa-magnifying-glass"></i> Search
-            </a>
-          </li>
+
           <li className="nav-item d-block">
             <a className="nav-link" href="/contact">
               <i class="fa-solid fa-envelope"></i> Contact
