@@ -2,13 +2,13 @@ import { variance } from '@babel/types';
 import { ContactPageSharp } from '@mui/icons-material';
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
 
 //Once API structures are in add book cover and list information
 function StreakTracker() {
-  const list = 'placeholder list title';
+  const list = 'Fiction';
+  const author = 'Sienna Day';
   const apiData = [
-    ['book title', 45],
+    ['A Song of Ice and Fire', 45],
     ['title of book', 21],
     ['book', 1],
   ];
@@ -22,12 +22,23 @@ function StreakTracker() {
   }
 
   return (
-    <div className='card mb-3' style={{ maxWidth: '540px' }}>
+    <div
+      className='card mb-3'
+      style={{
+        borderRadius: '25px',
+        backgroundColor: '#cc9735',
+        maxWidth: '40rem',
+      }}
+    >
       <div className='row g-0'>
         <div className='col-md-4'>
           <img
+            style={{
+              borderBottomLeftRadius: '25px',
+              borderTopLeftRadius: '25px',
+            }}
             src='http://placekitten.com/200/300'
-            class='img-fluid rounded-start'
+            className='img-fluid start-rounded'
             alt='placeholder cat'
           ></img>
         </div>
@@ -35,18 +46,25 @@ function StreakTracker() {
           <div className='card-body'>
             <p
               className='card-text'
-              style={{ color: '#cc9735', fontWeight: 'bold', fontSize: '2rem' }}
+              style={{ color: 'white', fontWeight: 'bold', fontSize: '2rem' }}
             >
               {title}
             </p>
-            <p className='card-text'>has been on {list} for</p>
+            <p className='card-text' style={{ color: 'white' }}>
+              by {author}
+            </p>
+            <p className='card-text' style={{ color: 'white' }}>
+              has been on the {list} bestsellers list for
+            </p>
             <p
               className='card-text'
-              style={{ color: '#cc9735', fontWeight: 'bold', fontSize: '2rem' }}
+              style={{ color: 'white', fontWeight: 'bold', fontSize: '2rem' }}
             >
               {streak}
             </p>
-            <p className='card-text'>days!</p>
+            <p className='card-text' style={{ color: 'white' }}>
+              weeks!
+            </p>
             <p className='card-text'></p>
           </div>
         </div>
