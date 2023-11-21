@@ -11,7 +11,7 @@ import "./App.css";
 function App() {
   return (
     <Router>
-      <div className="div-container d-flex">
+      <div className='div-container d-flex'>
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
