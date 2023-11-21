@@ -1,5 +1,6 @@
 import React from 'react';
 import StreakTracker from './StreakTracker.jsx';
+import PublisherDonut from './PublisherDonut.jsx';
 
 function Home() {
   return (
@@ -17,6 +18,7 @@ function Home() {
             </p>
           </section>
           <StreakTracker />
+          <PublisherDonut />
         </main>
       </div>
     </div>
