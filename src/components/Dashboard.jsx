@@ -124,7 +124,9 @@ function Dashboard() {
       temp = [];
     });
     avgWeeksByCat = weeksByCat.map(
-      (week) => week.reduce((acc, curr) => acc + curr) / week.length
+      (cat) =>
+        cat.reduce((accumulator, currentValue) => accumulator + currentValue) /
+        cat.length
     );
 
     // console.log(avgWeeksByCat);
