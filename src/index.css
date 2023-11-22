@@ -32,7 +32,37 @@ code {
   align-items: start;
 }
 
-div {
+.card-visual {
+  max-width: 200px;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 25px;
+  background: rgb(204, 151, 53);
+  padding: 20px;
+  width: 200px;
+  height: 110px;
+  text-align: center;
+  box-shadow: 0 4px 8px grey;
+  color: white;
+}
+
+.charts {
   max-width: 700px;
   margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 25px;
+  background: rgb(204, 151, 53);
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px grey;
+  color: white;
+}
+
+/*https://www.w3schools.com/css/css3_borders.asp*/
+
+.dashboard-visuals-container {
+  display: flex;
+  flex-direction: row;
 }
