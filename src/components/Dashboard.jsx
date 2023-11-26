@@ -47,11 +47,11 @@ function Dashboard() {
 
   //This is the API Call
   React.useEffect(() => {
-    fetch(
-      "https://api.nytimes.com/svc/books/v3/lists/full-overview.json?api-key=6P7g1cNgyA4yxbQWfxkMkq3hZi8RXYZp"
-    )
-      .then((response) => response.json())
-      .then((data) => routeAndParseData(data.results.lists));
+    //fetch(
+    //  "https://api.nytimes.com/svc/books/v3/lists/full-overview.json?api-key=6P7g1cNgyA4yxbQWfxkMkq3hZi8RXYZp"
+    //)
+    //  .then((response) => response.json())
+    //  .then((data) => routeAndParseData(data.results.lists));
   }, []);
 
   //This is a helper function that sends the API reponse data to various other funcitons to be parsed the way we want.
