@@ -13,10 +13,10 @@ import {
 import { Doughnut } from "react-chartjs-2";
 import { Bar } from "react-chartjs-2";
 import { Pie } from "react-chartjs-2";
-import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import ListCount from "./ListCount.jsx";
 import { List } from "reactstrap";
+import ListDropdown from "./ListDropdown.jsx"
 
 //ChartJS.register(ArcElement, Tooltip, Legend);
 ChartJS.register(
@@ -257,16 +257,7 @@ function Dashboard() {
         </h1>
       </header>
       <main>
-        <DropdownButton
-          id="dropdown-basic-button mp-10"
-          title="Bestseller List Category"
-        >
-          {listNameArr.map((listName, index) => (
-            <Dropdown.Item key={index} href="#/">
-              {listName}
-            </Dropdown.Item>
-          ))}
-        </DropdownButton>
+        <ListDropdown></ListDropdown>
         <ListCount></ListCount>
         <section className="dashboard-visual-container">
 

@@ -3,8 +3,6 @@ import { Context } from "./Context.js"
 import {useContext } from 'react'
 
 function Books() {
-  const {listNameArr, setListsArr, subList, setSubList} = useContext(Context)
-  console.log(listNameArr);
   return (
     <div>
       <header>

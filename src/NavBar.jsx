@@ -18,23 +18,23 @@ const NavBar = () => {
         <ul className="">
           <li className="nav-item active d-block">
             <a className="nav-link" href="/">
-              <i class="fa-solid fa-house"></i> Home
+              <i className="fa-solid fa-house"></i> Home
             </a>
           </li>
           <li className="nav-item d-block">
             <a className="nav-link" href="/dashboard">
-              <i class="fa-solid fa-chart-simple"></i> Dashboard
+              <i className="fa-solid fa-chart-simple"></i> Dashboard
             </a>
           </li>
           <li className="nav-item d-block">
             <a className="nav-link" href="/books">
-              <i class="fa-solid fa-book"></i> Books
+              <i className="fa-solid fa-book"></i> Books
             </a>
           </li>
 
           <li className="nav-item d-block">
             <a className="nav-link" href="/contact">
-              <i class="fa-solid fa-envelope"></i> Contact
+              <i className="fa-solid fa-envelope"></i> Contact
             </a>
           </li>
         </ul>
