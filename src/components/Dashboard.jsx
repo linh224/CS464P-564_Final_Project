@@ -13,9 +13,10 @@ import {
 import { Doughnut } from "react-chartjs-2";
 import { Bar } from "react-chartjs-2";
 import { Pie } from "react-chartjs-2";
-
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
+import ListCount from "./ListCount.jsx";
+import { List } from "reactstrap";
 
 //ChartJS.register(ArcElement, Tooltip, Legend);
 ChartJS.register(
@@ -266,11 +267,8 @@ function Dashboard() {
             </Dropdown.Item>
           ))}
         </DropdownButton>
+        <ListCount></ListCount>
         <section className="dashboard-visual-container">
-          <div className="card-visual">
-            <h2>{numResults}</h2>
-            <p>Count of NYT Bestsellers</p>
-          </div>
 
           <div className="card-visual">
             <h2>{numPublishers}</h2>
