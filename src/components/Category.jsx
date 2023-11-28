@@ -1,8 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import Chart from "./Chart.jsx";
-import Dropdown from "react-bootstrap/Dropdown";
-import DropdownButton from "react-bootstrap/DropdownButton";
+import BarChart from "./BarChart.jsx";
+// import Dropdown from "react-bootstrap/Dropdown";
+// import DropdownButton from "react-bootstrap/DropdownButton";
 
 function Category() {
   useEffect(() => {
@@ -27,12 +27,17 @@ function Category() {
 
   return (
     <div className="d-flex w-75">
-      <div className="left-side col-sd-4">
-        <span className="bg-info fs-2">All Category</span>
-
-        <div>
+      <div className="left-side col-sm-4">
+        <span className="text-primary text-center fs-3 p-3 fw-bold">
+          All Category
+        </span>
+        <div className="all-name-category">
           {category.map((currentCategory, idex) => (
-            <div onClick={handleLiClick} className="card text-dark" key={idex}>
+            <div
+              onClick={handleLiClick}
+              className="card text-dark p-1"
+              key={idex}
+            >
               <p>{currentCategory.list_name} </p>
             </div>
           ))}
@@ -45,8 +50,8 @@ function Category() {
           ))}
         </DropdownButton> */}
       </div>
-      <div className="chart-week-on-list w-50 h-50 ">
-        {clickedName && <Chart data={category} name={clickedName} />}
+      <div className="chart-week-on-list w-50 h-50 bg-light">
+        {clickedName && <BarChart data={category} name={clickedName} />}
       </div>
     </div>
   );

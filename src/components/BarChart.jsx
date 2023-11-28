@@ -23,12 +23,12 @@ function generateRandomColors() {
     const r = Math.floor(Math.random() * 256);
     const g = Math.floor(Math.random() * 256);
     const b = Math.floor(Math.random() * 256);
-    const alpha = 0.5; // You can adjust the alpha value as needed
+    const alpha = 0.5;
     return `rgba(${r}, ${g}, ${b}, ${alpha})`;
   });
 }
 
-const Chart = (props) => {
+const BarChart = (props) => {
   const getNewData = () => {
     let keyToSearch = "list_name";
     let valueToSearch = props.name;
@@ -37,8 +37,6 @@ const Chart = (props) => {
     const foundObject = arrayOfData.find(
       (obj) => obj[keyToSearch].trim() === valueToSearch.trim()
     );
-
-    //console.log("foundObject", foundObject);
 
     //list of book for found category
     let listOfBooks = foundObject.books;
@@ -83,7 +81,6 @@ const Chart = (props) => {
       },
     ],
   };
-  //return <Bar options={options} data={data} />;
   return <Bar options={options} data={data} />;
 };
-export default Chart;
+export default BarChart;

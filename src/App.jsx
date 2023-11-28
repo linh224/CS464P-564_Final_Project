@@ -5,7 +5,7 @@ import NavBar from "./NavBar.jsx";
 import Home from "./components/Home.jsx";
 import Dashboard from "./components/Dashboard.jsx";
 import Contact from "./components/Contact.jsx";
-import Search from "./components/Search.jsx";
+import About from "./components/About.jsx";
 
 import "./App.css";
 
@@ -17,7 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/search" element={<Search />} />
+          <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
