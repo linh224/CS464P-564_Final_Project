@@ -1,0 +1,20 @@
+.home {
+  background-image: url(../img/library2.png);
+}
+.welcome {
+  border-radius: 15px;
+  padding: 10px 50px;
+  background-color: rgb(123, 119, 119);
+  border-width: 10px;
+
+  max-width: 600px;
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 20px;
+}
+.welcome :hover {
+  background-color: rgb(204, 151, 53);
+  border-radius: 10px;
+}

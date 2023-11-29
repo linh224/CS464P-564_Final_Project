@@ -1,41 +1,44 @@
 import React from "react";
-//import logo from "./img/logo-book.png";
+
+import logo from "./img/logo-book.png";
 
 const NavBar = () => {
   return (
-    <nav className="p-5 m-1 align-items-start navbar navbar-expand-lg navbar-dark inline-flex h-100 ">
-      <div className="text-light">
-        {/* <div>
+
+  <nav className="navbar navbar-expand-lg ">
+      <div className="container-fluid text-dark">
+        <div>
           <img
             className="d-inline-block align-top"
             alt="icon-logo"
             src={logo}
-            width="60"
             height="40"
           />
-        </div> */}
+        </div>
 
-        <ul className="">
-          <li className="nav-item active d-block">
+        <ul className="navbar-nav">
+          <li className="nav-item active">
             <a className="nav-link" href="/">
-              <i class="fa-solid fa-house"></i> Home
+              Home
             </a>
           </li>
-          <li className="nav-item d-block">
-            <a className="nav-link" href="/books">
-              <i class="fa-solid fa-book"></i> Books
+          <li className="nav-item">
+            <a className="nav-link" href="/dashboard">
+            Dashboard
             </a>
           </li>
-          <li className="nav-item d-block">
-            <a className="nav-link" href="/search">
-              <i class="fa-solid fa-magnifying-glass"></i> Search
+          <li className="nav-item">
+            <a className="nav-link" href="/about">
+            About
             </a>
           </li>
-          <li className="nav-item d-block">
+          <li className="nav-item">
             <a className="nav-link" href="/contact">
-              <i class="fa-solid fa-envelope"></i> Contact
+              Contact
             </a>
           </li>
+         
+        
         </ul>
       </div>
     </nav>

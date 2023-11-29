@@ -1,17 +1,16 @@
 import React from "react";
+import "../CSS/Home.css";
 
 function Home() {
   return (
-    <div className="m-auto">
-      <div className="">
-        <header>
-          <h1 className="welcome text-primary text-center p-5">
-            Welcome to our Library!!!
-          </h1>
-        </header>
+    <div className="home p-5">
+      <div className="welcome ">
+        <h1 className=" text-light text-center fs-3 p-5">
+          WELCOME TO OUR LIBRARY
+        </h1>
         <main>
           <section>
-            <p className="intro text-center fs-5 fw-bold">
+            <p className="intro text-center text-light fs-5 fw-bold">
               You may explore some fascinating about our books.
             </p>
           </section>

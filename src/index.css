@@ -21,16 +21,14 @@ code {
   color:rgb(119, 115, 115);
   margin-left: 1px;
 }
-.nav-item:hover {
-  color: black;
+a:hover{
+  background-color: white;
 }
+
 .navbar{
   background-color: rgb(204, 151, 53);
 }
 
-.nav-style{
-  align-items: start;
-}
 
 
 
