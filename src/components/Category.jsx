@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import BarChart from "./BarChart.jsx";
+import ListMovementDoughnut from "./ListMovementDonut.jsx";
 // import Dropdown from "react-bootstrap/Dropdown";
 // import DropdownButton from "react-bootstrap/DropdownButton";
 
@@ -52,6 +53,11 @@ function Category() {
       </div>
       <div className="chart-week-on-list w-50 h-50 bg-light">
         {clickedName && <BarChart data={category} name={clickedName} />}
+      </div>
+      <div className="chart-week-on-list w-50 h-50 bg-light">
+        {clickedName && (
+          <ListMovementDoughnut data={category} name={clickedName} />
+        )}
       </div>
     </div>
   );
