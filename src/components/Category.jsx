@@ -1,8 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import BarChart from "./BarChart.jsx";
-// import Dropdown from "react-bootstrap/Dropdown";
-// import DropdownButton from "react-bootstrap/DropdownButton";
+
 
 function Category() {
   useEffect(() => {
@@ -13,6 +12,7 @@ function Category() {
       .then((response) => response.json())
       .then((data) => {
         let listOfData = data.results.lists;
+        console.log("linh", data);
         setCategory(listOfData);
       })
       .catch((err) => console.log(err));
@@ -42,13 +42,7 @@ function Category() {
             </div>
           ))}
         </div>
-        {/* <DropdownButton id="dropdown-basic-button mp-10 p-5" title="All Category">
-          {category.map((currentCategory, index) => (
-            <Dropdown.Item key={index} href="#/">
-              {currentCategory.list_name}
-            </Dropdown.Item>
-          ))}
-        </DropdownButton> */}
+       
       </div>
       <div className="chart-week-on-list w-50 h-50 bg-light">
         {clickedName && <BarChart data={category} name={clickedName} />}

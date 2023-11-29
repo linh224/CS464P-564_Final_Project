@@ -10,9 +10,9 @@ function Home() {
         </h1>
         <main>
           <section>
-            <p className="intro text-center text-light fs-5 fw-bold">
+            <span className="intro text-center text-light fs-5 fw-bold">
               You may explore some fascinating about our books.
-            </p>
+            </span>
           </section>
         </main>
       </div>
