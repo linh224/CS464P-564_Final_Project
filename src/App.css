@@ -42,3 +42,10 @@
     transform: rotate(360deg);
   }
 }
+.clicked-div{
+  background-color: rgb(197, 235, 114);
+}
+.card.text-dark.p-1{
+  margin: 10px;
+  
+}
