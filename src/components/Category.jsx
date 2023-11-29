@@ -2,6 +2,8 @@ import React from "react";
 import { useState, useEffect } from "react";
 import BarChart from "./BarChart.jsx";
 import ListMovementDoughnut from "./ListMovementDonut.jsx";
+import CountCard from "./CountCard.jsx";
+import UniquePubCard from "./UniquePubCard.jsx";
 // import Dropdown from "react-bootstrap/Dropdown";
 // import DropdownButton from "react-bootstrap/DropdownButton";
 
@@ -27,8 +29,8 @@ function Category() {
   };
 
   return (
-    <div className="d-flex w-75">
-      <div className="left-side col-sm-4">
+    <div className="d-flex w-100">
+      <div className="left-side col-sm-2">
         <span className="text-primary text-center fs-3 p-3 fw-bold">
           All Category
         </span>
@@ -43,14 +45,15 @@ function Category() {
             </div>
           ))}
         </div>
-        {/* <DropdownButton id="dropdown-basic-button mp-10 p-5" title="All Category">
-          {category.map((currentCategory, index) => (
-            <Dropdown.Item key={index} href="#/">
-              {currentCategory.list_name}
-            </Dropdown.Item>
-          ))}
-        </DropdownButton> */}
       </div>
+
+      <div className="chart-week-on-list w-50 h-50 bg-light">
+        {clickedName && <CountCard data={category} name={clickedName} />}
+      </div>
+      <div className="chart-week-on-list w-50 h-50 bg-light">
+        {clickedName && <UniquePubCard data={category} name={clickedName} />}
+      </div>
+
       <div className="chart-week-on-list w-50 h-50 bg-light">
         {clickedName && <BarChart data={category} name={clickedName} />}
       </div>
