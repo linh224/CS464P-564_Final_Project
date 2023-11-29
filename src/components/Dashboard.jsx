@@ -203,7 +203,7 @@ function Dashboard() {
       isbnByCat.push(temp);
       temp = [];
     });
-    //console.log(isbnByCat);
+    console.log(isbnByCat);
 
     return isbnByCat;
   }

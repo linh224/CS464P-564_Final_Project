@@ -66,3 +66,33 @@ code {
   display: flex;
   flex-direction: row;
 }
+.book-card {
+  max-width: 500px;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 25px;
+
+  display: flex;
+
+  flex-direction: column;
+  box-shadow: 1px 1px 8px rgba(204, 151, 53);
+  padding: 20px;
+}
+
+.book-card > img {
+  align-self: center;
+  object-fit: cover;
+  text-align: center;
+}
+span {
+  font-weight: bold;
+}
+a img:hover {
+  border-color: rgba(204, 151, 53);
+  border: 2px;
+  box-shadow: 1px 5px 20px rgba(204, 151, 53);
+}
+a button:hover {
+  box-shadow: 1px 5px 20px rgba(204, 151, 53);
+}
