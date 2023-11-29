@@ -1,22 +1,47 @@
 import React from "react";
 import { Book } from "./Book";
+import { element } from "prop-types";
 
 function Books() {
   //const apiKey = "AIzaSyDJz8Xa_tAwOasL0ZUVyjIe6ks1OeGvajU";
-  const isbn = "9781649374172";
-  const [booksArr, setBooksArr] = React.useState([]);
+  //const isbn = "9781649374172";
   const [isbnArr, setISBNArr] = React.useState([]);
+  const [booksArr, setBooksArr] = React.useState([]);
 
-  // let gbapiResults = [];
+  let gbapiResults = [];
 
   //This is the API Call
   React.useEffect(() => {
-    fetch(
-      "https://api.nytimes.com/svc/books/v3/lists/full-overview.json?api-key=6P7g1cNgyA4yxbQWfxkMkq3hZi8RXYZp"
-    )
-      .then((response) => response.json())
-      .then((data) => routeISBN(data.results.lists));
+    async function fetchNYTData() {
+      await fetch(
+        "https://api.nytimes.com/svc/books/v3/lists/full-overview.json?api-key=6P7g1cNgyA4yxbQWfxkMkq3hZi8RXYZp"
+      )
+        .then((response) => response.json())
+        .then((data) => setISBNArr(createISBNArr(data.results.lists)));
+    }
+    fetchNYTData();
   }, []);
+
+  //Will be used to make calls to the Google books API later
+  function createISBNArr(data) {
+    let isbnByCat = [];
+    let temp = [];
+    data.forEach((list) => {
+      list.books.forEach((book) => {
+        temp.push(book.primary_isbn13);
+      });
+      isbnByCat.push(temp);
+      temp = [];
+    });
+    console.log(isbnByCat);
+    console.log(isbnByCat[0]);
+    console.log(isbnByCat[0][0]);
+
+    getGoogleBooksData(isbnByCat);
+
+    return isbnByCat;
+  }
+
   /*
   //This is the API Call
   isbn.forEach((catArray) => {
@@ -32,19 +57,29 @@ function Books() {
     console.log(gbapiResults);
   });
   */
+  function getGoogleBooksData(isbnArrForGoogle) {
+    //React.useEffect(() => {
+    console.log("From GetGoogleBooksDataFunction" + isbnArr);
+    isbnArrForGoogle.forEach((isbnNum) => {
+      fetch(
+        "https://www.googleapis.com/books/v1/volumes?q=+isbn:" +
+          isbnNum +
+          "&key=AIzaSyDJz8Xa_tAwOasL0ZUVyjIe6ks1OeGvajU"
+      )
+        .then((response) => response.json())
+        .then((data) => routeAndParseData(data.items));
 
-  React.useEffect(() => {
-    fetch(
-      "https://www.googleapis.com/books/v1/volumes?q=+isbn:" +
-        isbn +
-        "&key=AIzaSyDJz8Xa_tAwOasL0ZUVyjIe6ks1OeGvajU"
-    )
-      .then((response) => response.json())
-      .then((data) => routeAndParseData(data.items));
-  }, []);
+      console.log(isbnArr);
+    });
+  }
+  //}, []);
 
   function routeAndParseData(data) {
-    setBooksArr(data);
+    gbapiResults.push(data);
+    setBooksArr(gbapiResults);
+    console.log(data);
+    console.log(gbapiResults);
+    /*
     console.log(data);
     console.log(data[0].volumeInfo.title);
     console.log(data[0].volumeInfo.authors[0]);
@@ -52,26 +87,7 @@ function Books() {
     console.log(data[0].volumeInfo.publisher);
     console.log(data[0].volumeInfo.publishedDate);
     console.log(data[0].volumeInfo.categories[0]);
-  }
-
-  function routeISBN(data) {
-    setISBNArr(createISBNArr(data));
-  }
-  //Will be used to make calls to the Google books API later
-  function createISBNArr(data) {
-    let isbnByCat = [];
-    let temp = [];
-    data.forEach((list) => {
-      list.books.forEach((book) => {
-        temp.push(book.primary_isbn13);
-      });
-      isbnByCat.push(temp);
-      temp = [];
-    });
-    console.log(isbnByCat);
-    console.log(isbnByCat[0][0]);
-
-    return isbnByCat;
+    */
   }
 
   return (
