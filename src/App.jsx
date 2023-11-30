@@ -10,12 +10,17 @@ import Books from "./components/Books.jsx";
 import "./App.css";
 
 function App() {
+  
   return (
     <Router>
       <div className="div-container">
         <NavBar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route
+            path="/"
+            
+            element={<Home />}
+          />
           <Route path="/dashboard" element={<Dashboard />} />
 
           <Route path="/about" element={<About />} />
