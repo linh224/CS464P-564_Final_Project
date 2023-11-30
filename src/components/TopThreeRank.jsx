@@ -1,7 +1,7 @@
 import React from 'react';
-import { Card } from './Card';
+import { Top3Card } from './Top3Card';
 
-const CountCard = (props) => {
+const TopThreeRank = (props) => {
   const getNewData = () => {
     let keyToSearch = 'list_name';
     let valueToSearch = props.name;
@@ -13,10 +13,12 @@ const CountCard = (props) => {
 
     //list of book for found category
     let listOfBooks = foundObject.books;
-
-    return listOfBooks.length;
+    console.log(listOfBooks);
+    return listOfBooks[0].title;
   };
-
-  return <Card count={getNewData()} cardTitle='Bestsellers on Current List' />;
+  //const top3 = getNewData();
+  return (
+    <Top3Card counts={getNewData()} cardTitle='#1 Bestseller on Current List' />
+  );
 };
-export default CountCard;
+export default TopThreeRank;

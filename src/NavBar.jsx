@@ -1,23 +1,26 @@
-import React from "react";
+
 import { NavLink } from "react-router-dom";
 
-import logo from "./img/logo-book.png";
+import logo from './img/logo-book.png';
 
 const NavBar = () => {
+
   const activeLink = "bg-light text-primary";
   const normalLink = "";
 
   return (
     <nav className="navbar navbar-expand-lg ">
       <div className="container-fluid text-dark">
+
         <div>
           <img
-            className="d-inline-block align-top"
-            alt="icon-logo"
+            className='d-inline-block align-top'
+            alt='icon-logo'
             src={logo}
-            height="40"
+            height='40'
           />
         </div>
+
         <div className="w-full">
           <ul className="nav custom-list">
             <li className=" nav-item">
@@ -63,6 +66,7 @@ const NavBar = () => {
             </li>
           </ul>
         </div>
+
       </div>
     </nav>
   );

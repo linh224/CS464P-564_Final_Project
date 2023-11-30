@@ -1,49 +1,88 @@
+:root {
+  --yellow: #ffd888;
+  --light-orange: #fdc583;
+  --orange: #fab27b;
+  --dark-orange: #f89f76;
+  --darkest-orange: hsl(13, 88%, 70%);
+  --salmon: #f47b6b;
+}
+
+@font-face {
+  font-family: Cocogoose;
+  src: url(Cocogoose-Semilight.ttf);
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: Cocogoose, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: Cocogoose, source-code-pro, Menlo, Monaco, Consolas,
+    'Courier New', monospace;
 }
+
 .navbar-nav .nav-item {
   display: block;
 }
+
 .nav-item {
   padding: 10px;
+  font-family: Cocogoose;
   font-weight: bold;
   font-size: larger;
-  color: rgb(42, 40, 40);
+  color: white;
   margin-left: 1px;
 }
+
 a:hover {
   background-color: white;
+  color: #ffd888;
 }
 
 .navbar {
-  background-color: rgb(204, 151, 53);
+  background-color: #ffd888;
 }
 
 .count-card {
+  font-family: Cocogoose;
   max-width: 500px;
   margin-left: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 25px;
-
   display: flex;
-
+  background-color: var(--yellow);
+  color: white;
   flex-direction: column;
-  box-shadow: 1px 1px 8px rgba(204, 151, 53);
+  justify-content: space-evenly;
   padding: 20px;
 }
-.count-card p {
-  font-weight: bold;
+
+.count-card h2 {
+  font-size: 100px;
+}
+
+.top-card {
+  font-family: Cocogoose;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 25px;
+  display: flex;
+  background-color: var(--yellow);
+  color: white;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+.top-card h2 {
+  font-size: 50px;
 }
 .linkStyle {
   text-decoration: none;
