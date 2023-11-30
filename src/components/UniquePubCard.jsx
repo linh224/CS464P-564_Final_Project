@@ -1,9 +1,9 @@
-import React from "react";
-import { Card } from "./Card";
+import React from 'react';
+import { Card } from './Card';
 
 const UniquePubCard = (props) => {
   const getNewData = () => {
-    let keyToSearch = "list_name";
+    let keyToSearch = 'list_name';
     let valueToSearch = props.name;
     let arrayOfData = props.data;
 
@@ -38,6 +38,6 @@ const UniquePubCard = (props) => {
     return counts;
   }
 
-  return <Card count={getNewData()} cardTitle="Count of Unique Publishers" />;
+  return <Card count={getNewData()} cardTitle='Publishers Represented' />;
 };
 export default UniquePubCard;

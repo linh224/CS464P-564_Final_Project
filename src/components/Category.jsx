@@ -4,6 +4,7 @@ import BarChart from './BarChart.jsx';
 import ListMovementDoughnut from './ListMovementDonut.jsx';
 import CountCard from './CountCard.jsx';
 import UniquePubCard from './UniquePubCard.jsx';
+import TopThreeRank from './TopThreeRank.jsx';
 // import Dropdown from "react-bootstrap/Dropdown";
 // import DropdownButton from "react-bootstrap/DropdownButton";
 
@@ -50,10 +51,17 @@ function Category() {
         <div>
           <h1
             className='display-1'
-            style={{ fontFamily: 'Cocogoose', color: '#ffd888' }}
+            style={{
+              textTransform: 'uppercase',
+              fontFamily: 'Cocogoose',
+              color: '#ffd888',
+            }}
           >
             {clickedName}
           </h1>
+        </div>
+        <div>
+          {clickedName && <TopThreeRank data={category} name={clickedName} />}
         </div>
         <div className='container-fluid p-0 vh-100 d-flex flex-column text-center'>
           <div class='d-flex align-items-center bd-highlight mb-3 '>

@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: Cocogoose;
-  src: url(Cocogoose-Light.ttf);
+  src: url(Cocogoose-Semilight.ttf);
 }
 
 body {
@@ -55,14 +55,32 @@ a:hover {
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 25px;
-
   display: flex;
   background-color: var(--yellow);
   color: white;
   flex-direction: column;
+  justify-content: space-evenly;
   padding: 20px;
 }
 
-.count-card p {
-  font-weight: bold;
+.count-card h2 {
+  font-size: 100px;
+}
+
+.top-card {
+  font-family: Cocogoose;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 25px;
+  display: flex;
+  background-color: var(--yellow);
+  color: white;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+.top-card h2 {
+  font-size: 50px;
 }

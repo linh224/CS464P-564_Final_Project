@@ -18,6 +18,8 @@ ChartJS.register(
   Legend
 );
 
+/* 
+//Replaced with palette colors
 function generateRandomColors() {
   return Array.from({ length: 3 }, () => {
     const r = Math.floor(Math.random() * 256);
@@ -27,6 +29,7 @@ function generateRandomColors() {
     return `rgba(${r}, ${g}, ${b}, ${alpha})`;
   });
 }
+*/
 
 const BarChart = (props) => {
   const getNewData = () => {
@@ -40,6 +43,7 @@ const BarChart = (props) => {
 
     //list of book for found category
     let listOfBooks = foundObject.books;
+    console.log(listOfBooks);
     listOfBooks.sort(function (a, b) {
       return b.weeks_on_list - a.weeks_on_list;
     });
