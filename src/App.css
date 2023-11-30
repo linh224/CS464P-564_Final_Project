@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: var(--salmon);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -42,10 +42,11 @@
     transform: rotate(360deg);
   }
 }
-.clicked-div{
-  background-color: rgb(197, 235, 114);
+.clicked-div {
+  background-color: var(--salmon);
+  color: white;
+  font-family: Cocogoose;
 }
-.card.text-dark.p-1{
+.card.text-dark.p-1 {
   margin: 10px;
-  
 }
