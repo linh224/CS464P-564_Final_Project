@@ -46,6 +46,16 @@ const NavBar = () => {
             </li>
             <li className="nav-item">
               <NavLink
+                to="/isbncategory"
+                className={({ isActive }) =>
+                  `linkStyle ${isActive ? activeLink : normalLink}`
+                }
+              >
+                Bestsellers
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
                 to="/about"
                 className={({ isActive }) =>
                   `linkStyle ${isActive ? activeLink : normalLink}`
