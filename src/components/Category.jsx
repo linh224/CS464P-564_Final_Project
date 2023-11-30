@@ -4,8 +4,6 @@ import BarChart from "./BarChart.jsx";
 import ListMovementDoughnut from "./ListMovementDonut.jsx";
 import CountCard from "./CountCard.jsx";
 import UniquePubCard from "./UniquePubCard.jsx";
-// import Dropdown from "react-bootstrap/Dropdown";
-// import DropdownButton from "react-bootstrap/DropdownButton";
 
 function Category() {
   useEffect(() => {
@@ -16,6 +14,7 @@ function Category() {
       .then((response) => response.json())
       .then((data) => {
         let listOfData = data.results.lists;
+        console.log("linh", data);
         setCategory(listOfData);
       })
       .catch((err) => console.log(err));
@@ -23,8 +22,25 @@ function Category() {
   const [category, setCategory] = useState([]);
   const [clickedName, setClickedName] = useState(null);
 
-  const handleLiClick = (event) => {
+  const handleClick = (event) => {
     const name = event.target.textContent;
+    const currentCard = event.target;
+
+    const className = event.target.className;
+
+    let hasClickedClass = className.includes("clicked-div");
+
+    if (!hasClickedClass) {
+      //Remove all clicked-div class from other elements
+      const otherCards = document.querySelectorAll(".card.clicked-div");
+      otherCards.forEach((card) => {
+        card.classList.remove("clicked-div");
+      });
+
+      // If not present, add the class to the current element
+      currentCard.classList.add("clicked-div");
+    }
+
     setClickedName(name);
   };
 
@@ -35,23 +51,25 @@ function Category() {
           All Category
         </span>
         <div className="all-name-category">
-          {category.map((currentCategory, idex) => (
+          {category.map((currentCategory, index) => (
             <div
-              onClick={handleLiClick}
-              className="card text-dark p-1"
-              key={idex}
+              onClick={handleClick}
+              className={`card text-dark p-1`}
+              id={currentCategory.list_id}
+              key={index}
             >
-              <p>{currentCategory.list_name} </p>
+              {currentCategory.list_name}
             </div>
           ))}
         </div>
       </div>
-
       <div className="chart-week-on-list w-50 h-50 bg-light">
         {clickedName && <CountCard data={category} name={clickedName} />}
       </div>
       <div className="chart-week-on-list w-50 h-50 bg-light">
-        {clickedName && <UniquePubCard data={category} name={clickedName} />}
+        {clickedName && (
+          <UniquePubCard Card data={category} name={clickedName} />
+        )}
       </div>
 
       <div className="chart-week-on-list w-50 h-50 bg-light">

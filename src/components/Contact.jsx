@@ -40,7 +40,7 @@ function Contact() {
           We want to hear from you
         </h1>
         <div className="mb-3">
-          <label className="form-label fw-bold">Name</label>
+          <label className="form-label fw-bold"for="name">Name</label>
           <input
             className="form-control shadow-sm"
             id="name"
@@ -52,7 +52,7 @@ function Contact() {
         </div>
 
         <div className="mb-3">
-          <label className="form-label fw-bold">Email</label>
+          <label className="form-label fw-bold" for="email">Email</label>
           <div className="input-group">
             <input
               className="form-control shadow-sm"
@@ -66,7 +66,7 @@ function Contact() {
         </div>
 
         <div className="mb-3">
-          <label className="form-label fw-bold">Message</label>
+          <label className="form-label fw-bold"for="message">Message</label>
           <textarea
             className="form-control shadow-sm"
             id="message"

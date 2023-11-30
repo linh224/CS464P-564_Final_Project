@@ -18,7 +18,7 @@ code {
   padding: 10px;
   font-weight: bold;
   font-size: larger;
-  color: rgb(119, 115, 115);
+  color: rgb(42, 40, 40);
   margin-left: 1px;
 }
 a:hover {
@@ -44,4 +44,16 @@ a:hover {
 }
 .count-card p {
   font-weight: bold;
+}
+.linkStyle {
+  text-decoration: none;
+  padding: 3px;
+  font-weight: bold;
+  font-size: larger;
+  color: rgb(91, 87, 87);
+  border-radius: 5px;
+
+}
+.newGreenColor{
+  background-color: yellow;
 }

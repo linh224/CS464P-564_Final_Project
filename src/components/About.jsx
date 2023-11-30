@@ -21,7 +21,8 @@ function About() {
           <div className="">
             <span className="team p-1 fs-2 fw-bold ">API Used</span>
             <ul className="custom-list fs-6 fw-bold p-3">
-              <li>NewYork API</li>
+              <li>NewYorkTimes API</li>
+              <li>Google Book API</li>
             </ul>
           </div>
         </div>
