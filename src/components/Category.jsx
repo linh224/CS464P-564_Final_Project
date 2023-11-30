@@ -2,8 +2,12 @@ import React from "react";
 import { useState, useEffect } from "react";
 import BarChart from "./BarChart.jsx";
 import ListMovementDoughnut from "./ListMovementDonut.jsx";
+import PublisherDonut from "./PublisherBar.jsx";
+// import Dropdown from "react-bootstrap/Dropdown";
+// import DropdownButton from "react-bootstrap/DropdownButton";
 import CountCard from "./CountCard.jsx";
 import UniquePubCard from "./UniquePubCard.jsx";
+
 
 function Category() {
   useEffect(() => {
@@ -79,6 +83,9 @@ function Category() {
         {clickedName && (
           <ListMovementDoughnut data={category} name={clickedName} />
         )}
+      </div>
+      <div className="chart-week-on-list w-50 h-50 bg-light">
+        {clickedName && (<PublisherDonut data={category} name={clickedName} />)}
       </div>
     </div>
   );
