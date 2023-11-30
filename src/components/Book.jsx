@@ -18,7 +18,7 @@ export function Book(props) {
         <p>{props.description}</p>
 
         <a href={props.previewLink} target="_blank" rel="noreferrer">
-          <button>Learn More</button>
+          <button className="btn btn-warning">Learn More</button>
         </a>
       </div>
     </div>

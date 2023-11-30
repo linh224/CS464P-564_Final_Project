@@ -60,7 +60,7 @@ function IsbnCategory() {
           ))}
         </div>
       </div>
-      <div className="chart-week-on-list w-50 h-50 bg-light">
+      <div className="dashboard-visuals-container">
         {clickedName && <BookView data={category} name={clickedName} />}
       </div>
     </div>
