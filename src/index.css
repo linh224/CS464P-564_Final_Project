@@ -24,15 +24,10 @@ code {
 a:hover {
   background-color: white;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> books_page
 .navbar {
   background-color: rgb(204, 151, 53);
 }
 
-<<<<<<< HEAD
 .count-card {
   max-width: 500px;
   margin-left: 20px;
@@ -49,7 +44,6 @@ a:hover {
 .count-card p {
   font-weight: bold;
 }
-=======
 .nav-style {
   align-items: start;
 }
@@ -118,4 +112,3 @@ a img:hover {
 a button:hover {
   box-shadow: 1px 5px 20px rgba(204, 151, 53);
 }
->>>>>>> books_page

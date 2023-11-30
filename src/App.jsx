@@ -4,11 +4,8 @@ import NavBar from "./NavBar.jsx";
 import Home from "./components/Home.jsx";
 import Dashboard from "./components/Dashboard.jsx";
 import Contact from "./components/Contact.jsx";
-<<<<<<< HEAD
 import About from "./components/About.jsx";
-=======
-import Dashboard from "./components/Dashboard.jsx";
->>>>>>> books_page
+import Books from "./components/Books.jsx";
 
 import "./App.css";
 
@@ -20,11 +17,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/dashboard" element={<Dashboard />} />
-<<<<<<< HEAD
+
           <Route path="/about" element={<About />} />
-=======
+
           <Route path="/books" element={<Books />} />
->>>>>>> books_page
+
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
