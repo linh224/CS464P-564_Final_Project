@@ -1,17 +1,14 @@
-
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 
 import logo from './img/logo-book.png';
 
 const NavBar = () => {
-
-  const activeLink = "bg-light text-primary";
-  const normalLink = "";
+  const activeLink = 'bg-light';
+  const normalLink = '';
 
   return (
-    <nav className="navbar navbar-expand-lg ">
-      <div className="container-fluid text-dark">
-
+    <nav className='navbar navbar-expand-lg '>
+      <div className='container-fluid'>
         <div>
           <img
             className='d-inline-block align-top'
@@ -21,62 +18,61 @@ const NavBar = () => {
           />
         </div>
 
-        <div className="w-full">
-          <ul className="nav custom-list">
-            <li className=" nav-item">
+        <div className='w-full'>
+          <ul className='nav custom-list'>
+            <li className=' nav-item'>
               <NavLink
                 exact
-                to="/"
+                to='/'
                 className={({ isActive }) =>
                   `linkStyle ${isActive ? activeLink : normalLink}`
                 }
               >
-                Home
+                HOME
               </NavLink>
             </li>
-            <li className="nav-item">
+            <li className='nav-item'>
               <NavLink
-                to="/dashboard"
+                to='/dashboard'
                 className={({ isActive }) =>
                   `linkStyle ${isActive ? activeLink : normalLink}`
                 }
               >
-                Dashboard
+                DASHBOARD
               </NavLink>
             </li>
-            <li className="nav-item">
+            <li className='nav-item'>
               <NavLink
-                to="/isbncategory"
+                to='/isbncategory'
                 className={({ isActive }) =>
                   `linkStyle ${isActive ? activeLink : normalLink}`
                 }
               >
-                Bestsellers
+                BESTSELLERS
               </NavLink>
             </li>
-            <li className="nav-item">
+            <li className='nav-item'>
               <NavLink
-                to="/about"
+                to='/about'
                 className={({ isActive }) =>
                   `linkStyle ${isActive ? activeLink : normalLink}`
                 }
               >
-                About
+                ABOUT
               </NavLink>
             </li>
-            <li className="nav-item">
+            <li className='nav-item'>
               <NavLink
-                to="/contact"
+                to='/contact'
                 className={({ isActive }) =>
                   `linkStyle ${isActive ? activeLink : normalLink}`
                 }
               >
-                Contact
+                CONTACT
               </NavLink>
             </li>
           </ul>
         </div>
-
       </div>
     </nav>
   );

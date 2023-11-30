@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useState, useEffect } from 'react';
 import BarChart from './BarChart.jsx';
@@ -16,7 +15,7 @@ function Category() {
       .then((response) => response.json())
       .then((data) => {
         let listOfData = data.results.lists;
-        console.log("linh", data);
+        console.log('linh', data);
         setCategory(listOfData);
       })
       .catch((err) => console.log(err));
@@ -30,17 +29,17 @@ function Category() {
 
     const className = event.target.className;
 
-    let hasClickedClass = className.includes("clicked-div");
+    let hasClickedClass = className.includes('clicked-div');
 
     if (!hasClickedClass) {
       //Remove all clicked-div class from other elements
-      const otherCards = document.querySelectorAll(".card.clicked-div");
+      const otherCards = document.querySelectorAll('.card.clicked-div');
       otherCards.forEach((card) => {
-        card.classList.remove("clicked-div");
+        card.classList.remove('clicked-div');
       });
 
       // If not present, add the class to the current element
-      currentCard.classList.add("clicked-div");
+      currentCard.classList.add('clicked-div');
     }
 
     setClickedName(name);
@@ -49,17 +48,21 @@ function Category() {
   return (
     <div className='d-flex w-100'>
       <div className='left-side col-sm-2'>
-        <span className='text-primary text-center fs-3 p-3 fw-bold'>
+        <span
+          className='text text-center fs-3 p-3 fw-bold'
+          style={{ color: 'var(--salmon)' }}
+        >
           All Category
         </span>
 
-        <div className="all-name-category">
+        <div className='all-name-category'>
           {category.map((currentCategory, index) => (
             <div
               onClick={handleClick}
               className={`card text-dark p-1`}
               id={currentCategory.list_id}
               key={index}
+              style={{ color: 'var(--salmon)' }}
             >
               {currentCategory.list_name}
             </div>
@@ -73,7 +76,7 @@ function Category() {
             style={{
               textTransform: 'uppercase',
               fontFamily: 'Cocogoose',
-              color: '#ffd888',
+              color: 'var(--salmon)',
             }}
           >
             {clickedName}

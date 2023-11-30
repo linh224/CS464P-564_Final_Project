@@ -1,5 +1,5 @@
 :root {
-  --yellow: #ffd888;
+  --yellow: #f47b6b;
   --light-orange: #fdc583;
   --orange: #fab27b;
   --dark-orange: #f89f76;
@@ -28,6 +28,7 @@ code {
 
 .navbar-nav .nav-item {
   display: block;
+  color: white;
 }
 
 .nav-item {
@@ -66,21 +67,21 @@ a:hover {
   font-size: 100px;
 }
 
-.top-card {
+.top3-card {
   font-family: Cocogoose;
   margin-left: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 25px;
   display: flex;
-  background-color: var(--yellow);
+  background-color: var(--salmon);
   color: white;
   flex-direction: column;
   justify-content: space-evenly;
   padding: 20px;
 }
 
-.top-card h2 {
+.top3-card h2 {
   font-size: 50px;
 }
 .nav-style {
@@ -93,7 +94,7 @@ a:hover {
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 25px;
-  background: rgb(204, 151, 53);
+  background: var(--salmon);
   padding: 20px;
   width: 200px;
   height: 110px;
@@ -108,7 +109,7 @@ a:hover {
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 25px;
-  background: rgb(204, 151, 53);
+  background: var(--salmon);
   padding: 20px;
   text-align: center;
   box-shadow: 0 4px 8px grey;
@@ -160,5 +161,5 @@ a button:hover {
   border-radius: 5px;
 }
 .newGreenColor {
-  background-color: yellow;
+  background-color: var(--salmon);
 }
