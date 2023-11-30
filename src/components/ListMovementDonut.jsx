@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -7,8 +7,8 @@ import {
   Title,
   Tooltip,
   Legend,
-} from "chart.js";
-import { Doughnut } from "react-chartjs-2";
+} from 'chart.js';
+import { Doughnut } from 'react-chartjs-2';
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -30,7 +30,7 @@ function generateRandomColors() {
 
 const ListMovementDoughnut = (props) => {
   const getNewData = () => {
-    let keyToSearch = "list_name";
+    let keyToSearch = 'list_name';
     let valueToSearch = props.name;
     let arrayOfData = props.data;
     let rankValues = [0, 0, 0, 0];
@@ -61,22 +61,29 @@ const ListMovementDoughnut = (props) => {
     responsive: true,
     plugins: {
       legend: {
-        position: "top",
+        position: 'left',
       },
       title: {
         display: true,
-        text: "Movement in Rank",
+        text: 'Movement in Rank',
       },
     },
   };
 
   let data = {
-    labels: ["New this Week", "No Change", "Moved Up", "Moved Down"],
+    labels: ['New this Week', 'No Change', 'Moved Up', 'Moved Down'],
     datasets: [
       {
         label: props.name,
         data: getNewData(),
-        backgroundColor: generateRandomColors(),
+        backgroundColor: [
+          '#ffd888',
+          '#fdc583',
+          '#fab27b',
+          '#f89f76',
+          '#f68d71',
+          '#f47b6b',
+        ],
       },
     ],
   };
