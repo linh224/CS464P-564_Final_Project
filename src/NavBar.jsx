@@ -22,6 +22,7 @@ const NavBar = () => {
               Home
             </a>
           </li>
+<<<<<<< HEAD
           <li className="nav-item">
             <a className="nav-link" href="/dashboard">
             Dashboard
@@ -33,6 +34,20 @@ const NavBar = () => {
             </a>
           </li>
           <li className="nav-item">
+=======
+          <li className="nav-item d-block">
+            <a className="nav-link" href="/dashboard">
+              <i class="fa-solid fa-chart-simple"></i> Dashboard
+            </a>
+          </li>
+          <li className="nav-item d-block">
+            <a className="nav-link" href="/books">
+              <i class="fa-solid fa-book"></i> Books
+            </a>
+          </li>
+
+          <li className="nav-item d-block">
+>>>>>>> books_page
             <a className="nav-link" href="/contact">
               Contact
             </a>
