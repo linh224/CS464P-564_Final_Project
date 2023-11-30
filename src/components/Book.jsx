@@ -13,7 +13,7 @@ export function Book(props) {
           <span>Publication Date:</span> {props.publishedDate}
         </p>
         <p>
-          <span>Publisher:</span>Publisher: {props.publisher}
+          <span>Publisher:</span> {props.publisher}
         </p>
         <p>{props.description}</p>
 
