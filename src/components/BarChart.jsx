@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -7,8 +7,8 @@ import {
   Title,
   Tooltip,
   Legend,
-} from "chart.js";
-import { Bar } from "react-chartjs-2";
+} from 'chart.js';
+import { Bar } from 'react-chartjs-2';
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -30,7 +30,7 @@ function generateRandomColors() {
 
 const BarChart = (props) => {
   const getNewData = () => {
-    let keyToSearch = "list_name";
+    let keyToSearch = 'list_name';
     let valueToSearch = props.name;
     let arrayOfData = props.data;
 
@@ -47,14 +47,14 @@ const BarChart = (props) => {
     //get top 3 of books
     let top3 = listOfBooks.slice(0, 3);
 
-    const propertyToKeep1 = "title";
-    const propertyToKeep2 = "weeks_on_list";
+    const propertyToKeep1 = 'title';
+    const propertyToKeep2 = 'weeks_on_list';
     const newLabels = top3.map((obj) => ({
       [propertyToKeep1]: obj[propertyToKeep1],
       [propertyToKeep2]: obj[propertyToKeep2],
     }));
 
-    console.log("newlabels", newLabels);
+    console.log('newlabels', newLabels);
     return newLabels;
   };
   let labels = getNewData();
@@ -62,11 +62,11 @@ const BarChart = (props) => {
     responsive: true,
     plugins: {
       legend: {
-        position: "top",
+        position: 'top',
       },
       title: {
         display: true,
-        text: "Top 3 Longest on Week List",
+        text: 'Top 3 Longest on Week List',
       },
     },
   };
@@ -77,7 +77,14 @@ const BarChart = (props) => {
       {
         label: props.name,
         data: labels.map((element) => element.weeks_on_list),
-        backgroundColor: generateRandomColors(),
+        backgroundColor: [
+          '#ffd888',
+          '#fdc583',
+          '#fab27b',
+          '#f89f76',
+          '#f68d71',
+          '#f47b6b',
+        ],
       },
     ],
   };
