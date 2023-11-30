@@ -84,3 +84,15 @@ a:hover {
 .top-card h2 {
   font-size: 50px;
 }
+.linkStyle {
+  text-decoration: none;
+  padding: 3px;
+  font-weight: bold;
+  font-size: larger;
+  color: rgb(91, 87, 87);
+  border-radius: 5px;
+
+}
+.newGreenColor{
+  background-color: yellow;
+}
