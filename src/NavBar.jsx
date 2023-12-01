@@ -15,7 +15,12 @@ const NavBar = () => {
             alt='icon-logo'
             src={logo}
             height='40'
-            style = {{width: '150px', height: '100px', overflow: 'hidden', objectFit: 'cover'}}
+            style={{
+              width: '150px',
+              height: '100px',
+              overflow: 'hidden',
+              objectFit: 'cover',
+            }}
           />
         </div>
 
