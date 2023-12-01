@@ -44,8 +44,11 @@ function IsbnCategory() {
   return (
     <div className="d-flex w-100">
       <div className="left-side col-sm-2">
-        <span className="text text-center fs-3 p-3 fw-bold" style={{color: 'var(--salmon)'}}>
-          All Category
+        <span
+          className="text text-center fs-3 p-3 fw-bold"
+          style={{ color: "var(--salmon)" }}
+        >
+          Categories
         </span>
         <div className="all-name-category">
           {category.map((currentCategory, index) => (
@@ -60,8 +63,20 @@ function IsbnCategory() {
           ))}
         </div>
       </div>
-      <div className="dashboard-visuals-container">
-        {clickedName && <BookView data={category} name={clickedName} />}
+      <div className="container-fluid d-flex flex-column text-center">
+        <h1
+          className="display-1"
+          style={{
+            textTransform: "uppercase",
+            fontFamily: "Cocogoose",
+            color: "var(--salmon)",
+          }}
+        >
+          Learn More about the #1 Bestsellers
+        </h1>
+        <div>
+          {clickedName && <BookView data={category} name={clickedName} />}
+        </div>
       </div>
     </div>
   );

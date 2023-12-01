@@ -7,7 +7,9 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 function About() {
   return (
     <div className="m-auto">
+
       <h1 className=" text text-center p-3" style={{color: 'var(--salmon)', fontFamily: 'Cocogoose'}}>About Our Team</h1>
+
       <div className="d-flex justify-content-center">
         <div className="member p-3">
           <div className="">
@@ -19,9 +21,11 @@ function About() {
             </ul>
           </div>
           <div className="">
-            <span className="team p-1 fs-2 fw-bold " style={{backgroundColor: 'var(--darkest-orange)', color: 'white'}}>API Used</span>
+
+            <span className="team p-1 fs-2 fw-bold " style={{backgroundColor: 'var(--darkest-orange)', color: 'white'}}>APIs Used</span>
+
             <ul className="custom-list fs-6 fw-bold p-3">
-              <li>NewYorkTimes API</li>
+              <li>New York Times Bestsellers API</li>
               <li>Google Books API</li>
             </ul>
           </div>
@@ -33,6 +37,7 @@ function About() {
                 labels: ["Deana", "Linh", "Sienna"],
                 datasets: [
                   {
+
                     label: "Count",
                     data: [1, 1, 1], //get data from GitHub
                     //Swapped github data for silly chart of counts of us in group
@@ -52,6 +57,7 @@ function About() {
                       '#f68d71',
                       '#f47b6b',
                     ],
+
                     borderWidth: 1,
                   },
                 ],

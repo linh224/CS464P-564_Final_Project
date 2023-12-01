@@ -14,18 +14,35 @@
 
 body {
   margin: 0;
-  font-family: Cocogoose, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-    'Helvetica Neue', sans-serif;
+  font-family: Cocogoose, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
   font-family: Cocogoose, source-code-pro, Menlo, Monaco, Consolas,
-    'Courier New', monospace;
+    "Courier New", monospace;
+}
+.member {
+  color: var(--salmon);
+  font-family: Cocogoose, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+}
+.member li {
+  color: rgb(91, 87, 87);
+  padding: 10px;
+}
+.member span {
+  font-weight: bold;
 }
 
+.homepage-list li {
+  font: bold;
+  padding: 20px;
+}
 .navbar-nav .nav-item {
   display: block;
   color: white;
@@ -133,7 +150,9 @@ a:hover {
   display: flex;
 
   flex-direction: column;
-  box-shadow: 1px 1px 8px var(--yellow);
+
+  box-shadow: 1px 1px 8px var(--salmon);
+
   padding: 20px;
   font-family: 'Cocogoose';
   text-align: center;
@@ -149,12 +168,14 @@ span {
   font-weight: bold;
 }
 a img:hover {
-  border-color: var(--yellow);
+
+  border-color: var(--salmon);
   border: 2px;
-  box-shadow: 1px 5px 20px var(--yellow);
+  box-shadow: 1px 5px 20px var(--salmon);
+
 }
 a button:hover {
-  box-shadow: 1px 5px 20px rgba(204, 151, 53);
+  box-shadow: 1px 5px 20px var(--salmon);
 }
 .linkStyle {
   text-decoration: none;
