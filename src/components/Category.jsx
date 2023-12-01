@@ -80,7 +80,7 @@ function Category() {
               color: 'var(--salmon)',
             }}
           >
-            {clickedName ? clickedName : 'Select a bestseller category'}
+            {clickedName == null ? 'Select a bestseller category' : clickedName}
           </h1>
         </div>
         <div>
