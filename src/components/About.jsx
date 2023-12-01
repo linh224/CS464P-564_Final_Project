@@ -7,11 +7,11 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 function About() {
   return (
     <div className="m-auto">
-      <h1 className=" text-primary text-center p-3">About Our Team</h1>
+      <h1 className=" text text-center p-3" style={{color: 'var(--salmon)', fontFamily: 'Cocogoose'}}>About Our Team</h1>
       <div className="d-flex justify-content-center">
         <div className="member p-3">
           <div className="">
-            <span className="team p-1 fs-2 fw-bold ">Team Members</span>
+            <span className="team p-1 fs-2 fw-bold" style={{backgroundColor: 'var(--darkest-orange)', color: 'white'}}>Team Members</span>
             <ul className="custom-list fs-6 fw-bold">
               <li>Deana Jackson</li>
               <li>Sienna Day</li>
@@ -19,7 +19,7 @@ function About() {
             </ul>
           </div>
           <div className="">
-            <span className="team p-1 fs-2 fw-bold ">API Used</span>
+            <span className="team p-1 fs-2 fw-bold " style={{backgroundColor: 'var(--darkest-orange)', color: 'white'}}>API Used</span>
             <ul className="custom-list fs-6 fw-bold p-3">
               <li>NewYorkTimes API</li>
               <li>Google Books API</li>
@@ -30,20 +30,27 @@ function About() {
           <div className="pie-chart">
             <Pie
               data={{
-                labels: ["JavaScript", "HTML", "CSS"],
+                labels: ["Deana", "Linh", "Sienna"],
                 datasets: [
                   {
-                    label: "Languages",
-                    data: [62.1, 23.2, 14.7], //get data from GitHub
+                    label: "Count",
+                    data: [1, 1, 1], //get data from GitHub
+                    //Swapped github data for silly chart of counts of us in group
                     backgroundColor: [
-                      "rgba(54, 162, 235, 0.8)",
-                      "rgba(255, 206, 86, 0.8)",
-                      "rgba(255, 99, 132, 0.8)",
+                      '#ffd888',
+                      '#fdc583',
+                      '#fab27b',
+                      '#f89f76',
+                      '#f68d71',
+                      '#f47b6b',
                     ],
                     borderColor: [
-                      "rgba(54, 162, 235, 1)",
-                      "rgba(255, 206, 86, 1)",
-                      "rgba(255, 99, 132, 1)",
+                      '#ffd888',
+                      '#fdc583',
+                      '#fab27b',
+                      '#f89f76',
+                      '#f68d71',
+                      '#f47b6b',
                     ],
                     borderWidth: 1,
                   },

@@ -30,6 +30,7 @@ function Contact() {
     console.log("Name:", name);
     console.log("Email:", email);
     console.log("Message:", message);
+    alert("We will not read your responses because we are no longer in this class! But thank you for the feedback!")
     handleReset();
   };
 

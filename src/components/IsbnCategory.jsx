@@ -44,7 +44,7 @@ function IsbnCategory() {
   return (
     <div className="d-flex w-100">
       <div className="left-side col-sm-2">
-        <span className="text-primary text-center fs-3 p-3 fw-bold">
+        <span className="text text-center fs-3 p-3 fw-bold" style={{color: 'var(--salmon)'}}>
           All Category
         </span>
         <div className="all-name-category">
