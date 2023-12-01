@@ -139,6 +139,7 @@ a:hover {
   display: flex;
   flex-direction: row;
 }
+
 .book-card {
   max-width: 500px;
   margin-left: 20px;
@@ -149,8 +150,12 @@ a:hover {
   display: flex;
 
   flex-direction: column;
+
   box-shadow: 1px 1px 8px var(--salmon);
+
   padding: 20px;
+  font-family: 'Cocogoose';
+  text-align: center;
 }
 
 .book-card > img {
@@ -158,13 +163,16 @@ a:hover {
   object-fit: cover;
   text-align: center;
 }
+
 span {
   font-weight: bold;
 }
 a img:hover {
+
   border-color: var(--salmon);
   border: 2px;
   box-shadow: 1px 5px 20px var(--salmon);
+
 }
 a button:hover {
   box-shadow: 1px 5px 20px var(--salmon);
@@ -174,7 +182,7 @@ a button:hover {
   padding: 3px;
   font-weight: bold;
   font-size: larger;
-  color: rgb(91, 87, 87);
+  color: var(--salmon);
   border-radius: 5px;
 }
 .newGreenColor {

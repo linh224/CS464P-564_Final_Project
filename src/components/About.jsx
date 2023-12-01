@@ -7,11 +7,13 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 function About() {
   return (
     <div className="m-auto">
-      <h1 className=" member  text-center p-3">About Our Team</h1>
+
+      <h1 className=" text text-center p-3" style={{color: 'var(--salmon)', fontFamily: 'Cocogoose'}}>About Our Team</h1>
+
       <div className="d-flex justify-content-center">
         <div className="member p-3">
           <div className="">
-            <span className="team p-1 fs-2 fw-bold ">Team Members</span>
+            <span className="team p-1 fs-2 fw-bold" style={{backgroundColor: 'var(--darkest-orange)', color: 'white'}}>Team Members</span>
             <ul className="custom-list fs-6 fw-bold">
               <li>Deana Jackson</li>
               <li>Sienna Day</li>
@@ -19,7 +21,9 @@ function About() {
             </ul>
           </div>
           <div className="">
-            <span className="team p-1 fs-2 fw-bold ">APIs Used</span>
+
+            <span className="team p-1 fs-2 fw-bold " style={{backgroundColor: 'var(--darkest-orange)', color: 'white'}}>APIs Used</span>
+
             <ul className="custom-list fs-6 fw-bold p-3">
               <li>New York Times Bestsellers API</li>
               <li>Google Books API</li>
@@ -30,13 +34,30 @@ function About() {
           <div className="pie-chart">
             <Pie
               data={{
-                labels: ["JavaScript", "HTML", "CSS"],
+                labels: ["Deana", "Linh", "Sienna"],
                 datasets: [
                   {
-                    label: "Languages",
-                    data: [84.6, 4.9, 10.5], //get data from GitHub
-                    backgroundColor: ["#fab27b", "#fdc583", "#f89f76"],
-                    borderColor: ["#fab27b", "#fdc583", "#f89f76"],
+
+                    label: "Count",
+                    data: [1, 1, 1], //get data from GitHub
+                    //Swapped github data for silly chart of counts of us in group
+                    backgroundColor: [
+                      '#ffd888',
+                      '#fdc583',
+                      '#fab27b',
+                      '#f89f76',
+                      '#f68d71',
+                      '#f47b6b',
+                    ],
+                    borderColor: [
+                      '#ffd888',
+                      '#fdc583',
+                      '#fab27b',
+                      '#f89f76',
+                      '#f68d71',
+                      '#f47b6b',
+                    ],
+
                     borderWidth: 1,
                   },
                 ],
