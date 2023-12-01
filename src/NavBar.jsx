@@ -28,7 +28,6 @@ const NavBar = () => {
           <ul className='nav custom-list'>
             <li className=' nav-item'>
               <NavLink
-                exact
                 to='/'
                 className={({ isActive }) =>
                   `linkStyle ${isActive ? activeLink : normalLink}`
