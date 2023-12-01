@@ -14,22 +14,22 @@
 
 body {
   margin: 0;
-  font-family: Cocogoose, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-    "Helvetica Neue", sans-serif;
+  font-family: Cocogoose, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
   font-family: Cocogoose, source-code-pro, Menlo, Monaco, Consolas,
-    "Courier New", monospace;
+    'Courier New', monospace;
 }
 .member {
   color: var(--salmon);
-  font-family: Cocogoose, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-    "Helvetica Neue", sans-serif;
+  font-family: Cocogoose, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
 }
 .member li {
   color: rgb(91, 87, 87);
@@ -168,11 +168,9 @@ span {
   font-weight: bold;
 }
 a img:hover {
-
   border-color: var(--salmon);
   border: 2px;
   box-shadow: 1px 5px 20px var(--salmon);
-
 }
 a button:hover {
   box-shadow: 1px 5px 20px var(--salmon);

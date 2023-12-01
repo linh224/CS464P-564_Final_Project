@@ -72,19 +72,6 @@ function Category() {
 
       <div className='container-fluid d-flex flex-column text-center'>
         <div>
-          <h5
-            style={{
-              padding: '10px',
-              textAlign: 'left',
-              textTransform: 'uppercase',
-              fontFamily: 'Cocogoose',
-              color: 'rgb(91, 87, 87)',
-            }}
-          >
-            Select a Bestseller category
-          </h5>
-        </div>
-        <div>
           <h1
             className='display-1'
             style={{
@@ -93,7 +80,7 @@ function Category() {
               color: 'var(--salmon)',
             }}
           >
-            {clickedName}
+            {clickedName ? clickedName : 'Select a bestseller category'}
           </h1>
         </div>
         <div>
