@@ -7,7 +7,7 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 function About() {
   return (
     <div className="m-auto">
-      <h1 className=" text-primary text-center p-3">About Our Team</h1>
+      <h1 className=" member  text-center p-3">About Our Team</h1>
       <div className="d-flex justify-content-center">
         <div className="member p-3">
           <div className="">
@@ -19,9 +19,9 @@ function About() {
             </ul>
           </div>
           <div className="">
-            <span className="team p-1 fs-2 fw-bold ">API Used</span>
+            <span className="team p-1 fs-2 fw-bold ">APIs Used</span>
             <ul className="custom-list fs-6 fw-bold p-3">
-              <li>NewYorkTimes API</li>
+              <li>New York Times Bestsellers API</li>
               <li>Google Books API</li>
             </ul>
           </div>
@@ -34,17 +34,9 @@ function About() {
                 datasets: [
                   {
                     label: "Languages",
-                    data: [62.1, 23.2, 14.7], //get data from GitHub
-                    backgroundColor: [
-                      "rgba(54, 162, 235, 0.8)",
-                      "rgba(255, 206, 86, 0.8)",
-                      "rgba(255, 99, 132, 0.8)",
-                    ],
-                    borderColor: [
-                      "rgba(54, 162, 235, 1)",
-                      "rgba(255, 206, 86, 1)",
-                      "rgba(255, 99, 132, 1)",
-                    ],
+                    data: [84.6, 4.9, 10.5], //get data from GitHub
+                    backgroundColor: ["#fab27b", "#fdc583", "#f89f76"],
+                    borderColor: ["#fab27b", "#fdc583", "#f89f76"],
                     borderWidth: 1,
                   },
                 ],

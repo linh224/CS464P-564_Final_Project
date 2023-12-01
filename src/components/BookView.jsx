@@ -1,28 +1,84 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import { Book } from "./Book";
+//import { type } from "@testing-library/user-event/dist/type";
 
 const BookView = (props) => {
-  const getISBNByCat = () => {
-    let keyToSearch = "list_name";
-    let valueToSearch = props.name;
-    let arrayOfData = props.data;
+  let keyToSearch = "list_name";
+  let valueToSearch = props.name;
+  let arrayOfData = props.data;
 
-    const foundObject = arrayOfData.find(
-      (obj) => obj[keyToSearch].trim() === valueToSearch.trim()
+  const foundObject = arrayOfData.find(
+    (obj) => obj[keyToSearch].trim() === valueToSearch.trim()
+  );
+  // isbn Num for just the first book in the list
+  let isbnNum = foundObject.books[0].primary_isbn13;
+  const [books, setBooks] = useState([]);
+  //const [isbnNum, setISBNNum] = useState([]);
+  //isbnArr.forEach((isbnNum) => {
+  useEffect(() => {
+    const url =
+      "https://www.googleapis.com/books/v1/volumes?q=+isbn:" +
+      isbnNum +
+      "&key=AIzaSyDJz8Xa_tAwOasL0ZUVyjIe6ks1OeGvajU";
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Deana");
+        let volumeInfo = data.items[0].volumeInfo;
+        setBooks(createBookArr(volumeInfo));
+      })
+      .catch((err) => console.log(err));
+  }, [isbnNum]);
+  // });
+
+  function createBookArr(volumeInfo) {
+    return (
+      <Book
+        img={volumeInfo.imageLinks.smallThumbnail}
+        title={volumeInfo.title}
+        author={volumeInfo.authors[0]}
+        description={volumeInfo.description}
+        publishedDate={volumeInfo.publishedDate}
+        publisher={volumeInfo.publisher}
+        previewLink={volumeInfo.previewLink}
+      />
+    );
+  }
+
+  return books;
+  /*
+  const getGBAPIData = () => {
+    let isbnNum = getISBNByCat();
+    let booksArr = [];
+
+
+    React.useEffect(
+      fetch(
+        "https://www.googleapis.com/books/v1/volumes?q=+isbn:" +
+          isbnNum +
+          "&key=AIzaSyDJz8Xa_tAwOasL0ZUVyjIe6ks1OeGvajU"
+      )
+        .then((response) => response.json())
+        .then((data) =>
+          booksArr.push(
+            <Book
+              img={data.items[0].volumeInfo.imageLinks.smallThumbnail}
+              title={data.items[0].volumeInfo.title}
+              author={data.items[0].volumeInfo.authors[0]}
+              description={data.items[0].volumeInfo.description}
+              publishedDate={data.items[0].volumeInfo.publishedDate}
+              publisher={data.items[0].volumeInfo.publisher}
+              previewLink={data.items[0].volumeInfo.previewLink}
+            />
+          )
+        )
     );
 
-    //list of book for found category
-    let listOfBooks = foundObject.books;
-
-    let isbnByCat = [];
-
-    listOfBooks.forEach((book) => {
-      isbnByCat.push(book.primary_isbn13);
-    });
-    let isbnByCatSliced = isbnByCat.slice(0, 5);
-
-    return isbnByCatSliced;
+    return booksArr;
   };
+
+  /*
   const getGBAPIData = () => {
     let isbnArr = getISBNByCat();
     let booksArr = [];
@@ -46,12 +102,11 @@ const BookView = (props) => {
               previewLink={data.items[0].volumeInfo.previewLink}
             />
           )
-        );
+      );
     });
 
     return booksArr;
   };
-
   /*
   const getGBAPIData = () => {
     let isbnArr = getISBNByCat();
@@ -78,12 +133,12 @@ const BookView = (props) => {
 
     return booksArr;
   };
-  */
+  
 
-  let booksArr = getGBAPIData();
-  console.log("Outside Function");
-  console.log(booksArr);
-  console.log(booksArr[0]);
+  let booksCollection = getGBAPIData();
+  // console.log("Outside Function");
+  //console.log(typeof booksArr);
+  //console.log(booksArr);
 
   let threeSampleBooks = [
     <Book
@@ -116,7 +171,8 @@ const BookView = (props) => {
     />,
   ];
 
-  return threeSampleBooks;
+  return booksCollection;
+  */
 };
 /*
   return (
