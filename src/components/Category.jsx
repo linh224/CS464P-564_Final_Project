@@ -5,6 +5,8 @@ import ListMovementDoughnut from './ListMovementDonut.jsx';
 import CountCard from './CountCard.jsx';
 import UniquePubCard from './UniquePubCard.jsx';
 import TopThreeRank from './TopThreeRank.jsx';
+import Dropdown from 'react-bootstrap/Dropdown';
+import { Container } from 'react-bootstrap';
 
 function Category() {
   useEffect(() => {
@@ -46,70 +48,79 @@ function Category() {
   };
 
   return (
-    <div className='d-flex w-100'>
-      <div className='left-side col-sm-2'>
-        <span
-          className='text text-center fs-3 p-3 fw-bold'
-          style={{ color: 'var(--salmon)' }}
+    <Container className='fluid'>
+      <Dropdown>
+        <Dropdown.Toggle
+          id='dropdown'
+          style={{
+            backgroundColor: 'var(--salmon)',
+            fontFamily: 'Cocogoose',
+            width: '100%',
+            margin: '10px',
+            border: 'var(--salmon)',
+            fontSize: '4vw',
+          }}
         >
-          Categories
-        </span>
-
-        <div className='all-name-category'>
+          Select a Bestseller Category
+        </Dropdown.Toggle>
+        <Dropdown.Menu
+          style={{
+            marginTop: '0px',
+            width: '100%',
+            textAlign: 'center',
+            fontFamily: 'Cocogoose',
+          }}
+        >
           {category.map((currentCategory, index) => (
-            <div
+            <Dropdown.Item
               onClick={handleClick}
-              className={`card text-dark p-1`}
               id={currentCategory.list_id}
               key={index}
-              style={{ color: 'var(--salmon)', fontFamily: 'Cocogoose' }}
             >
               {currentCategory.list_name}
-            </div>
+            </Dropdown.Item>
           ))}
-        </div>
-      </div>
-
-      <div className='container-fluid d-flex flex-column text-center'>
+        </Dropdown.Menu>
+      </Dropdown>
+      <div className='flex text-center flex-wrap'>
         <div>
           <h1
             className='display-1'
             style={{
-              textTransform: 'uppercase',
               fontFamily: 'Cocogoose',
               color: 'var(--salmon)',
             }}
           >
-            {clickedName == null ? 'Select a bestseller category' : clickedName}
+            {clickedName == null
+              ? 'Welcome! Select a Category to Get Started'
+              : clickedName}
           </h1>
         </div>
         <div>
           {clickedName && <TopThreeRank data={category} name={clickedName} />}
         </div>
-        <div className='container-fluid p-0 vh-100 d-flex flex-column text-center'>
-          <div className='d-flex align-items-center bd-highlight mb-3 '>
-            <div className='flex-fill bd-highlight'>
+        <Container className='fluid text-center'>
+          <Container className='row'>
+            <div className='col d-flex justify-content-center'>
               {clickedName && <CountCard data={category} name={clickedName} />}
             </div>
-            <div className='flex-fill bd-highlight'>
+            <div className='col d-flex justify-content-center'>
               {clickedName && (
                 <UniquePubCard data={category} name={clickedName} />
               )}
             </div>
-          </div>
-          <div className='d-flex align-items-center bd-highlight mb-3 justify-content-between'>
-            <div className='flex-fill bd-highlight'>
-              {clickedName && <BarChart data={category} name={clickedName} />}
-            </div>
-            <div className='flex-fill bd-highlight'>
-              {clickedName && (
-                <ListMovementDoughnut data={category} name={clickedName} />
-              )}{' '}
-            </div>
-          </div>
-        </div>
+          </Container>
+          <Container className='fluid' style={{ height: '500px' }}>
+            {clickedName && <BarChart data={category} name={clickedName} />}
+          </Container>
+          <Container className='fluid'>
+            {clickedName && (
+              <ListMovementDoughnut data={category} name={clickedName} />
+            )}{' '}
+          </Container>
+        </Container>
       </div>
-    </div>
+    </Container>
   );
 }
 

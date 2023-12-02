@@ -74,6 +74,9 @@ const ListMovementDoughnut = (props) => {
           '#f68d71',
           '#f47b6b',
         ],
+        options: {
+          maintainAspectRatio: false,
+        },
       },
     ],
   };
