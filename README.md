@@ -27,3 +27,11 @@ Develop a dynamic and user-friendly web dashboard that provides a comprehensive 
 https://developers.google.com/books
 
 https://developer.nytimes.com/docs/books-product/1/overview
+
+https://react-bootstrap.netlify.app/docs/components/navbar/
+
+https://react.dev/reference/react/hooks
+
+https://react.dev/learn/scaling-up-with-reducer-and-context
+
+https://react-chartjs-2.js.org/docs/working-with-datasets
