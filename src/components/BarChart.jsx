@@ -73,13 +73,8 @@ const BarChart = (props) => {
         display: true,
         text: 'Books with the Longest Streaks',
       },
-      datalabels: {
-        display: true,
-        color: 'black',
-        formatter: Math.round,
-        anchor: 'end',
-        offset: -20,
-        align: 'start',
+      labels: {
+        display: false,
       },
     },
   };
@@ -100,21 +95,10 @@ const BarChart = (props) => {
         ],
         options: {
           maintainAspectRatio: false,
-          scales: {
-            xAxes: [
-              {
-                ticks: {
-                  autoSkip: false,
-                  maxRotation: 90,
-                  minRotation: 90,
-                },
-              },
-            ],
-          },
         },
       },
     ],
   };
-  return <Bar options={options} data={data} />;
+  return <Bar data={data} options={options} />;
 };
 export default BarChart;

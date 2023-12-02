@@ -110,13 +110,25 @@ function Category() {
               )}
             </div>
           </Container>
-          <Container className='fluid' style={{ height: '500px' }}>
-            {clickedName && <BarChart data={category} name={clickedName} />}
-          </Container>
-          <Container className='fluid'>
-            {clickedName && (
-              <ListMovementDoughnut data={category} name={clickedName} />
-            )}{' '}
+          <Container className='row'>
+            <Container
+              className='col d-flex justify-content-center'
+              style={{
+                height: 'auto',
+              }}
+            >
+              {clickedName && <BarChart data={category} name={clickedName} />}
+            </Container>
+            <Container
+              className='col d-flex justify-content-center'
+              style={{
+                width: '50%',
+              }}
+            >
+              {clickedName && (
+                <ListMovementDoughnut data={category} name={clickedName} />
+              )}
+            </Container>
           </Container>
         </Container>
       </div>

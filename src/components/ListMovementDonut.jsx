@@ -51,7 +51,7 @@ const ListMovementDoughnut = (props) => {
     responsive: true,
     plugins: {
       legend: {
-        position: 'left',
+        position: 'top',
       },
       title: {
         display: true,
