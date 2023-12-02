@@ -2,6 +2,7 @@
   "name": "front_end",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://linh224.github.io/CS464P-564_Final_Project",
   "dependencies": {
     "@faker-js/faker": "^8.3.1",
     "@testing-library/jest-dom": "^5.17.0",
@@ -22,6 +23,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "jest",
     "eject": "react-scripts eject"
@@ -47,6 +50,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@babel/preset-react": "^7.23.3",
+    "gh-pages": "^6.1.0",
     "jest": "^27.5.1"
   }
 }
