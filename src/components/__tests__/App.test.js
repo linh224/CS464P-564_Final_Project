@@ -1,8 +1,7 @@
-//import { render, screen } from '@testing-library/react';
-
 import React from " react";
-import ReactDOM from "react-dom";
-//import App from "./App";
+//import ReactDOM from "react-dom";
+import { render, screen, cleanup } from "@testing-library/react";
+import App from "../../App.jsx";
 import Book from "./Book.jsx";
 
 /*
@@ -12,14 +11,14 @@ test('renders learn react link', () => {
   expect(linkElement).toBeInTheDocument();
 });
 */
-/*
+afterEach(cleanup);
 describe("<App /> Component", () => {
   it("Renders without crashing", () => {
     const div = document.createElement("div");
-    ReactDOM.render(<App />, div);
+    render(<App />, div);
   });
 });
-*/
+
 describe("Book component", () => {
   it("renders correctly with required props", () => {
     const mockProps = {
@@ -32,16 +31,14 @@ describe("Book component", () => {
       description: "This is a book description.",
     };
 
-    const { queryByText, getByAltText, getByLabelText } = ReactDOM.render(
-      <Book {...mockProps} />
-    );
+    render(<Book {...mockProps} />);
 
-    expect(queryByText(mockProps.title)).toBeTruthy();
-    expect(queryByText(mockProps.author)).toBeTruthy();
-    expect(queryByText(mockProps.publishedDate)).toBeTruthy();
-    expect(queryByText(mockProps.publisher)).toBeTruthy();
-    expect(queryByText(mockProps.description)).toBeTruthy();
-    expect(getByLabelText("Learn More")).toBeTruthy();
-    expect(getByAltText("Thumbnail of Book Cover")).toBeTruthy();
+    expect(screen.getByText(mockProps.title)).toBeTruthy();
+    expect(screen.getByText(mockProps.author)).toBeTruthy();
+    expect(screen.getByText(mockProps.publishedDate)).toBeTruthy();
+    expect(screen.getByText(mockProps.publisher)).toBeTruthy();
+    expect(screen.getByText(mockProps.description)).toBeTruthy();
+    expect(screen.getByLabelText("Learn More")).toBeTruthy();
+    expect(screen.getByAltText("Thumbnail of Book Cover")).toBeTruthy();
   });
 });

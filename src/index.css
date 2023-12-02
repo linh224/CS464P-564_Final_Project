@@ -141,7 +141,6 @@ a:hover {
 }
 
 .book-card {
-  max-width: 500px;
   margin-left: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -154,7 +153,7 @@ a:hover {
   box-shadow: 1px 1px 8px var(--salmon);
 
   padding: 20px;
-  font-family: 'Cocogoose';
+  font-family: "Cocogoose";
   text-align: center;
 }
 
@@ -168,11 +167,9 @@ span {
   font-weight: bold;
 }
 a img:hover {
-
   border-color: var(--salmon);
   border: 2px;
   box-shadow: 1px 5px 20px var(--salmon);
-
 }
 a button:hover {
   box-shadow: 1px 5px 20px var(--salmon);
