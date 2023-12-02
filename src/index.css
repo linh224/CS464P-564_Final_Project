@@ -33,7 +33,7 @@ code {
     'Helvetica Neue', sans-serif;
 }
 .member li {
-  color: white;
+  color: var(--yellow);
   padding: 10px;
   font-size: 25px;
 }
@@ -45,6 +45,7 @@ code {
   font: bold;
   padding: 20px;
 }
+
 .navbar-nav .nav-item {
   display: block;
   color: white;
