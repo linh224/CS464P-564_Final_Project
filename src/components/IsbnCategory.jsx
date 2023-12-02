@@ -1,6 +1,8 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import BookView from './BookView';
+import Dropdown from 'react-bootstrap/Dropdown';
+import Container from 'react-bootstrap/Container';
 
 function IsbnCategory() {
   useEffect(() => {
@@ -42,44 +44,59 @@ function IsbnCategory() {
   };
 
   return (
-    <div className='d-flex w-100'>
-      <div className='left-side col-sm-2'>
-        <span
-          className='text text-center fs-3 p-3 fw-bold'
-          style={{ color: 'var(--salmon)' }}
-        >
-          Categories
-        </span>
-        <div className='all-name-category'>
-          {category.map((currentCategory, index) => (
-            <div
-              onClick={handleClick}
-              className={`card text-dark p-1`}
-              id={currentCategory.list_id}
-              key={index}
-              style={{ color: 'var(--salmon)', fontFamily: 'Cocogoose' }}
-            >
-              {currentCategory.list_name}
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className='container-fluid d-flex flex-column text-center'>
-        <h1
-          className='display-1'
+    <Container className='fluid'>
+      <Dropdown>
+        <Dropdown.Toggle
+          id='dropdown'
           style={{
-            textTransform: 'uppercase',
+            backgroundColor: 'var(--salmon)',
             fontFamily: 'Cocogoose',
-            color: 'var(--salmon)',
+            width: '100%',
+            margin: '10px',
+            border: 'var(--salmon)',
+            fontSize: '4vw',
           }}
         >
-          Learn More about the #1 Bestsellers
-        </h1>
+          Select a Bestseller Category
+        </Dropdown.Toggle>
+        <Dropdown.Menu
+          style={{
+            marginTop: '0px',
+            width: '100%',
+            textAlign: 'center',
+            fontFamily: 'Cocogoose',
+          }}
+        >
+          {category.map((currentCategory, index) => (
+            <Dropdown.Item
+              onClick={handleClick}
+              id={currentCategory.list_id}
+              key={index}
+            >
+              {currentCategory.list_name}
+            </Dropdown.Item>
+          ))}
+        </Dropdown.Menu>
+      </Dropdown>
+      <div className='flex text-center flex-wrap'>
         <div>
-          {clickedName && <BookView data={category} name={clickedName} />}
+          <h1
+            className='display-1'
+            style={{
+              fontFamily: 'Cocogoose',
+              color: 'var(--salmon)',
+            }}
+          >
+            {clickedName == null
+              ? 'Welcome! Select a Category to Get Started'
+              : clickedName}
+          </h1>
         </div>
       </div>
-    </div>
+      <div>
+        {clickedName && <BookView data={category} name={clickedName} />}
+      </div>
+    </Container>
   );
 }
 
