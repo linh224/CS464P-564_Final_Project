@@ -22,7 +22,7 @@ function Home() {
                 </li>
                 <li>
                   Learn more about us and the project on the <span>About</span>{' '}
-                  and <span>Contact pages.</span>
+                  and <span>Contact </span> pages.
                 </li>
               </ul>
             </div>

@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
 export function Book(props) {
   return (
-    <div className="book-card">
-      <a href={props.previewLink} target="_blank" rel="noreferrer">
-        <img src={props.img} alt="Thumbnail of Book Cover" />
+    <div className='book-card'>
+      <a href={props.previewLink} target='_blank' rel='noreferrer'>
+        <img src={props.img} alt='Thumbnail of Book Cover' />
       </a>
-      <div className="search--text">
+      <div className='search--text'>
         <h2>{props.title}</h2>
         <h3>By {props.author}</h3>
         <p>
@@ -17,8 +17,8 @@ export function Book(props) {
         </p>
         <p>{props.description}</p>
 
-        <a href={props.previewLink} target="_blank" rel="noreferrer">
-          <button className="btn btn-warning">Learn More</button>
+        <a href={props.previewLink} target='_blank' rel='noreferrer'>
+          <button className='btn btn-warning'>Learn More</button>
         </a>
       </div>
     </div>

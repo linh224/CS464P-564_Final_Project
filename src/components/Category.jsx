@@ -59,10 +59,10 @@ function Category() {
           {category.map((currentCategory, index) => (
             <div
               onClick={handleClick}
-              className={`card text-dark p-1`}
+              className={`card text-dark p-2`}
               id={currentCategory.list_id}
               key={index}
-              style={{ color: 'var(--salmon)' }}
+              style={{ color: 'var(--salmon)', fontFamily: 'Cocogoose' }}
             >
               {currentCategory.list_name}
             </div>

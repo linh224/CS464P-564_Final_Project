@@ -18,16 +18,6 @@ ChartJS.register(
   Legend
 );
 
-function generateRandomColors() {
-  return Array.from({ length: 3 }, () => {
-    const r = Math.floor(Math.random() * 256);
-    const g = Math.floor(Math.random() * 256);
-    const b = Math.floor(Math.random() * 256);
-    const alpha = 0.5;
-    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
-  });
-}
-
 const ListMovementDoughnut = (props) => {
   const getNewData = () => {
     let keyToSearch = 'list_name';

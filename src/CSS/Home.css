@@ -1,10 +1,12 @@
 .home {
   background-image: url(../img/library2.png);
 }
+
 .welcome {
   border-radius: 15px;
   padding: 10px 50px;
   background-color: var(--salmon);
+  color: white;
   border-width: 10px;
   font-family: Cocogoose;
   text-align: center;
@@ -16,4 +18,3 @@
   transform: translateX(-50%);
   padding-top: 20px;
 }
-

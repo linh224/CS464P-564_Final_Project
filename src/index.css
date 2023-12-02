@@ -1,10 +1,10 @@
 :root {
-  --yellow: #f47b6b;
+  --yellow: #db4d0b;
   --light-orange: #fdc583;
   --orange: #fab27b;
   --dark-orange: #f89f76;
   --darkest-orange: hsl(13, 88%, 70%);
-  --salmon: #f47b6b;
+  --salmon: #db4d0b;
 }
 
 @font-face {
@@ -25,6 +25,7 @@ code {
   font-family: Cocogoose, source-code-pro, Menlo, Monaco, Consolas,
     'Courier New', monospace;
 }
+
 .member {
   color: var(--salmon);
   font-family: Cocogoose, -apple-system, BlinkMacSystemFont, 'Segoe UI',
@@ -32,8 +33,9 @@ code {
     'Helvetica Neue', sans-serif;
 }
 .member li {
-  color: rgb(91, 87, 87);
+  color: white;
   padding: 10px;
+  font-size: 25px;
 }
 .member span {
   font-weight: bold;
@@ -180,7 +182,7 @@ a button:hover {
   padding: 3px;
   font-weight: bold;
   font-size: larger;
-  color: var(--salmon);
+  color: #db4d0b;
   border-radius: 5px;
 }
 .newGreenColor {
