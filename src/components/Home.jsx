@@ -4,7 +4,7 @@ import '../CSS/Home.css';
 function Home() {
   return (
     <div className='home p-5'>
-      <div className='welcome '>
+      <div className='welcome'>
         <h1 className='text-light text-center fs-3 p-4'>
           WELCOME TO THE BESTSELLERS DASHBOARD
         </h1>

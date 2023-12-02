@@ -21,7 +21,7 @@ function About() {
             height: 'auto',
           }}
         >
-          <div className='member p-3'>
+          <div className='about p-3'>
             <div className=''>
               <span
                 className='team p-1 fs-2 fw-bold'

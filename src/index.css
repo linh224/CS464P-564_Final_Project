@@ -33,10 +33,16 @@ code {
     'Helvetica Neue', sans-serif;
 }
 .member li {
-  color: var(--yellow);
+  color: white;
   padding: 10px;
   font-size: 25px;
 }
+
+.about li {
+  padding: 10px;
+  font-size: 25px;
+}
+
 .member span {
   font-weight: bold;
 }

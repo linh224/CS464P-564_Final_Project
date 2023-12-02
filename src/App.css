@@ -45,7 +45,7 @@
 .clicked-div {
   background-color: var(--salmon);
   color: white;
-  font-family: Cocogoose;
+  font-family: 'Cocogoose';
 }
 
 .card.text-dark.p-1 {

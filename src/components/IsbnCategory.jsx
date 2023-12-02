@@ -88,7 +88,7 @@ function IsbnCategory() {
             }}
           >
             {clickedName == null
-              ? 'Welcome! Select a Category to Get Started'
+              ? 'View Top Books! Select a Category to Get Started'
               : clickedName}
           </h1>
         </div>
