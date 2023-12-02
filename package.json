@@ -2,7 +2,7 @@
   "name": "front_end",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://linh224.github.io/CS464P-564_Final_Project",
+  "homepage": "https://linh224.github.io/CS464P-564_Final_Project",
   "dependencies": {
     "@faker-js/faker": "^8.3.1",
     "@testing-library/jest-dom": "^5.17.0",
