@@ -191,6 +191,7 @@ a button:hover {
   font-size: larger;
   color: #db4d0b;
   border-radius: 5px;
+  margin: 10px;
 }
 .newGreenColor {
   background-color: var(--salmon);
